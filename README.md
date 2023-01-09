@@ -1,5 +1,8 @@
 # Building limits splitter
-An API which given building limits and height plateaus splits building limits into corresponding height plateaus
+An API which given building limits and height plateaus splits building limits into corresponding height plateaus.
+
+# API
+The exposed REST api is `POST your_host/splits`. The body expects 2 parameters `building_limits` and `height_plateaus` and both are expected to be GeoJson describing a collection of polygons.
 
 # Requirements to run and test the application locally
 1. Running postgres instance, you can create it either locally or create a free instance at https://www.elephantsql.com/
