@@ -231,11 +231,7 @@ optional = false
 python-versions = ">=3.8"
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.20.3", markers = "python_version < \"3.10\""},
-    {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
-    {version = ">=1.23.2", markers = "python_version >= \"3.11\""},
-]
+numpy = {version = ">=1.20.3", markers = "python_version < \"3.10\""}
 python-dateutil = ">=2.8.1"
 pytz = ">=2020.1"
 
@@ -390,8 +386,8 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.8"
-content-hash = "f12eb25bdfb200ec8f33b924fef6044d8e97333a16b6a12496ccf5b78b9b607c"
+python-versions = "3.8.1"
+content-hash = "1ed7595cc0664482e4ea98e7074af8fb30888e7145727854bd54adf331605cfa"
 
 [metadata.files]
 attrs = []
