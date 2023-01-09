@@ -12,3 +12,8 @@ An API which given building limits and height plateaus splits building limits in
 3. Run `poetry install`, this should install all needed packages
 4. To start application run `flask run`
 5. To run tests run `pytest`
+
+# Troubleshooting
+*Problem: ModuleNotFoundError: No module named 'psycopg2'*
+
+Solution: Delete poetry.lock file, and rerun `poetry install` within poetry shell
