@@ -13,7 +13,7 @@ The exposed REST api is `POST your_host/splits`. The body expects 2 parameters `
 1. Clone repo.
 2. `cd` into repo and run `poetry shell`, this should spawn a new virtual environment
 3. Run `poetry install`, this should install all needed packages
-4. To start application run `flask run`
+4. To start application run `flask run`. By default, the server will start at `http://127.0.0.1:5000`
 5. To run tests run `pytest`
 
 # Troubleshooting
