@@ -43,13 +43,13 @@ def index():
         height_plateaus_gdf = geopandas.GeoDataFrame.from_features(height_plateaus_json)
     except:
         return "Invalid input format, should be a valid geojson containing feature collection", 400
+
+    # Verify geometries are non empty
+    if building_limits_gdf.geometry.any() == None or height_plateaus_gdf.geometry.any() == None:
+        return "Invalid input format, invalid 'geometry' property found", 400
     
-    # Convert to GeoSeries
-    try:
-        building_limits = geopandas.GeoSeries(building_limits_gdf.geometry)
-        height_plateaus = geopandas.GeoSeries(height_plateaus_gdf.geometry)
-    except:
-        return "Invalid input format, no 'geometry' property found", 400
+    building_limits = geopandas.GeoSeries(building_limits_gdf.geometry)
+    height_plateaus = geopandas.GeoSeries(height_plateaus_gdf.geometry)
 
     if has_overlaps(building_limits):
         return "Building limits have overlapping area", 400
