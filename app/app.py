@@ -14,8 +14,12 @@ app = Flask(__name__)
 url = os.environ.get("DATABASE_URL")
 connection = psycopg2.connect(url)
 
+@app.route('/', methods=['GET'])
+def ping():
+    return "Alive"
+
 @app.route('/splits', methods=['POST'])
-def index():
+def splits():
     """
     The endpoint calculate split building limits with corresponding
     elevation given building limits and height plateaus.

@@ -137,6 +137,20 @@ pyproj = ">=2.6.1.post1"
 shapely = ">=1.7"
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "iniconfig"
 version = "2.0.0"
 description = "brain-dead simple config-ini parsing"
@@ -358,7 +372,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.6"
-content-hash = "dc877fbe63e81359d63c2c5f8d4ddf30adfa8565dd568a2934ffc0ebe51e907a"
+content-hash = "1ff48f98cd67c7445f63ab2300863c33a439e6390c37b43c037a23863ca4a306"
 
 [metadata.files]
 attrs = []
@@ -371,6 +385,7 @@ exceptiongroup = []
 fiona = []
 flask = []
 geopandas = []
+gunicorn = []
 iniconfig = []
 itsdangerous = []
 jinja2 = []
