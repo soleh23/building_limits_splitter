@@ -1,5 +1,6 @@
 # Building limits splitter
 An API which given building limits and height plateaus splits building limits into corresponding height plateaus.
+The deployed version is at https://damp-hamlet-78056.herokuapp.com/. The app is a deployed to Heroku and the computed splits are persisted to Postgres databse. The Postgres instance is deployed at https://www.elephantsql.com/.
 
 # API
 The exposed REST api is `POST your_host/splits`. The body expects 2 parameters `building_limits` and `height_plateaus` and both are expected to be GeoJson describing a collection of polygons with type `FeatureCollection`.
