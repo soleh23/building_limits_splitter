@@ -1,1 +1,1 @@
-from .app import app, connection
+from .app import app, connection, get_splits
